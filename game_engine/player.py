@@ -36,6 +36,13 @@ class Player:
         """ Returns list of all face-down cards"""
         return [i for i, (card, up) in enumerate(zip(self.grid, self.face_up)) if not up and card is not None]
 
+    def all_cards_face_up(self) -> bool: 
+        """ Check if all cards for player are face up """
+        for i in range(GRID_SIZE): 
+            if not self.face_up[i]: 
+                return False 
+        return True 
+    
     def calculate_score(self): 
         """Calculates score for grid"""
         total_score = 0 
