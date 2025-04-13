@@ -28,7 +28,7 @@ class Deck:
 
     def is_empty(self): 
         """ Check if deck is empty """ 
-        return len(self.cardss) == 0
+        return len(self.cards) == 0
 
     def deal(self): 
         """ Deal a card """ 
