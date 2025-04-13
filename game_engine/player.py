@@ -57,7 +57,6 @@ class Player:
             if cards[0].rank == cards[1].rank == cards[2].rank: 
                 matched_idx.update(idx)
 
-
         # Check rows (0,1,2), (3,4,5), (6,7,8)
         for row_start in range(GRID_DIM):
             # Get  cards at each row sset
