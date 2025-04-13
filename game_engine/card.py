@@ -14,12 +14,14 @@ class Card:
             return 0
         if self.rank == ACE: 
             return 1 
-        if self.rank in [JACK, QUEEN]: 
+        if self.rank in [TEN, JACK, QUEEN]: 
             return 10
-        if self.rank in [TEN,NINE,EIGHT,SEVEN,SIX,FIVE,FOUR,THREE,TWO,ACE]: 
+        if self.rank in [NINE,EIGHT,SEVEN,SIX,FIVE,FOUR,THREE,TWO]: 
             return int(self.rank)
 
-
-    def __str__(self): 
-        return(print(f"{self.suit}{self.rank}))
+    def __str__(self) -> str:
+        if self.rank == JOKER:
+            return "Joker"
+        rank_display = self.rank
+        return f"{rank_display}{self.suit}"
 

@@ -35,4 +35,8 @@ class Deck:
         if not self.is_empty(): 
             return self.cards.pop()
         return None
-    def add_cards(self, cards: List[
+        
+    def add_cards(self, cards: List[Card]): 
+        """Adds a list of cards to the deck"""
+        self.cards.extend(cards)
+        
