@@ -22,8 +22,17 @@ class Deck:
         for _ in range(self.num_jokers):
             self.cards.append(Card(JOKER,JOKER_SUIT))
 
-
     def shuffle(self): 
         """ Shuffle the deck """ 
         random.shuffle(self.cards)
-        
+
+    def is_empty(self): 
+        """ Check if deck is empty """ 
+        return len(self.cardss) == 0
+
+    def deal(self): 
+        """ Deal a card """ 
+        if not self.is_empty(): 
+            return self.cards.pop()
+        return None
+    def add_cards(self, cards: List[
