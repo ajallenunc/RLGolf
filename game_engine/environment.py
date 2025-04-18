@@ -480,7 +480,6 @@ class GolfEnvironment:
             print(f"Discard Top: {top_discard}")
             if self.drawn_card: print(f"Player {self.current_player} holding drawn card: {self.drawn_card}")
 
-            # Print Player Hands (requires Player class __str__)
             for p_idx, player_obj in enumerate(self.players):
                 flips = self.initial_flips_count[p_idx] if self.current_phase == PHASE_INITIAL_FLIP else 3
                 print(f"\n--- Player {p_idx} Hand (Initial Flips: {flips}/3) ---")
