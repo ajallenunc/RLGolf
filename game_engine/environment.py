@@ -5,6 +5,8 @@ from .deck import Deck
 from .player import Player
 from .constants import *
 
+# To-do: Finish adding type hints 
+
 class GolfEnvironment: 
     """Handle Golf Environment"""
     
