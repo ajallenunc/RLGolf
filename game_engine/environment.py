@@ -480,10 +480,11 @@ class GolfEnvironment:
             print(f"Discard Top: {top_discard}")
             if self.drawn_card: print(f"Player {self.current_player} holding drawn card: {self.drawn_card}")
 
+            # Print player grids 
             for p_idx, player_obj in enumerate(self.players):
                 flips = self.initial_flips_count[p_idx] if self.current_phase == PHASE_INITIAL_FLIP else 3
                 print(f"\n--- Player {p_idx} Hand (Initial Flips: {flips}/3) ---")
-                print(player_obj) # Relies on Player.__str__
+                print(player_obj)
 
                 # Show scores only at the end
                 if self.game_over or self.round_over:
@@ -518,7 +519,6 @@ class GolfEnvironment:
                      print(f"(Choose card index {self.initial_flips_count[self.current_player]+1}/3 to flip)")
 
         else:
-            # For non-human modes, maybe return observations
             return self.get_observation(0), self.get_observation(1)
 
 
